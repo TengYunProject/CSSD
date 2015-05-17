@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C502E87-6D25-476F-AA9F-7236864CA60D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSSD.Client.UI</RootNamespace>
+    <AssemblyName>CSSD.Client.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSSD.Server.BaseClass, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CSSD.Server.BaseClass.dll</HintPath>
+    </Reference>
+    <Reference Include="CSSD.Server.DataBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CSSD.Server.DataBase.dll</HintPath>
+    </Reference>
+    <Reference Include="CSSD.Server.DataModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CSSD.Server.DataModel.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Design, Version=10.0.0.11, Culture=neutral, PublicKeyToken=3caa4ad0ba35cf8d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.0.0.11, Culture=neutral, PublicKeyToken=d159a0cb0c2a1170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.5.0.15095, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerBench\FrmCodingRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBench\FrmCodingRules.Designer.cs">
+      <DependentUpon>FrmCodingRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerBench\FrmEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBench\FrmEquipment.Designer.cs">
+      <DependentUpon>FrmEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerBench\FrmPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBench\FrmPrinter.Designer.cs">
+      <DependentUpon>FrmPrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerBench\FrmSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBench\FrmSite.Designer.cs">
+      <DependentUpon>FrmSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerBench\FrmSiteType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBench\FrmSiteType.Designer.cs">
+      <DependentUpon>FrmSiteType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerBench\FrmStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBench\FrmStation.Designer.cs">
+      <DependentUpon>FrmStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PubHelper\CommUtility.cs" />
+    <Compile Include="PubHelper\PubStaticModel.cs" />
+    <Compile Include="PubHelper\ReadFile.cs" />
+    <Compile Include="PubHelper\TextEncoding.cs" />
+    <Compile Include="RoutineBusiness\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoutineBusiness\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoutineBusiness\FrmWash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoutineBusiness\FrmWash.Designer.cs">
+      <DependentUpon>FrmWash.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBench\FrmCodingRules.resx">
+      <DependentUpon>FrmCodingRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBench\FrmEquipment.resx">
+      <DependentUpon>FrmEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBench\FrmPrinter.resx">
+      <DependentUpon>FrmPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBench\FrmSite.resx">
+      <DependentUpon>FrmSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBench\FrmSiteType.resx">
+      <DependentUpon>FrmSiteType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBench\FrmStation.resx">
+      <DependentUpon>FrmStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RoutineBusiness\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoutineBusiness\FrmWash.resx">
+      <DependentUpon>FrmWash.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DirectorBench\" />
+    <Folder Include="Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\工厂.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\工厂1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\机器.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\工作台.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\打印.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
