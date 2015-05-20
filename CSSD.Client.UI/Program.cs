@@ -28,8 +28,6 @@ namespace CSSD.Client.UI
                 case "FrmMain":
                     Application.Run(new FrmMain());
                     break;
-                default:
-                    break;
             }
         }
     }
