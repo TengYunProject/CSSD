@@ -60,6 +60,7 @@
     <Compile Include="ManagerBenchModel\SiteTypeModel.cs" />
     <Compile Include="ManagerBenchModel\StationModel.cs" />
     <Compile Include="ManagerBenchModel\UserGroupModel.cs" />
+    <Compile Include="ManagerBenchModel\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
