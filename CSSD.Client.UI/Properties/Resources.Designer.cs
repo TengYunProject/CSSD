@@ -63,6 +63,26 @@ namespace CSSD.Client.UI.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 客户 {
+            get {
+                object obj = ResourceManager.GetObject("客户", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 客户组 {
+            get {
+                object obj = ResourceManager.GetObject("客户组", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 工作台 {
             get {
                 object obj = ResourceManager.GetObject("工作台", resourceCulture);
@@ -103,6 +123,16 @@ namespace CSSD.Client.UI.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 工厂类型 {
+            get {
+                object obj = ResourceManager.GetObject("工厂类型", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 打印 {
             get {
                 object obj = ResourceManager.GetObject("打印", resourceCulture);
@@ -116,6 +146,36 @@ namespace CSSD.Client.UI.Properties {
         internal static System.Drawing.Bitmap 机器 {
             get {
                 object obj = ResourceManager.GetObject("机器", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 用户 {
+            get {
+                object obj = ResourceManager.GetObject("用户", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 用户1 {
+            get {
+                object obj = ResourceManager.GetObject("用户1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 用户组 {
+            get {
+                object obj = ResourceManager.GetObject("用户组", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -17,7 +17,7 @@ namespace CSSD.Server.DataBase
         /// <param name="connectionString">数据库连接字符串</param>
         /// <param name="commandText">SQL语句</param>
         /// <param name="args">参数</param>
-        /// <returns>影响行数 int</returns>
+        /// <returns></returns>
         public static int ExecuteNonQuery(out string errorString, string connectionString, string commandText, params IDbDataParameter[] args)
         {
 

@@ -58,7 +58,7 @@ namespace CSSD.Client.UI.ManagerBench
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            CommUtility.SetEnabled(true, btnCan, btnCan, comStationType, txtStationName, txtSpellCode, txtIP, txtDesc);
+            CommUtility.SetEnabled(true, btnSave, btnCan, comStationType, txtStationName, txtSpellCode, txtIP, txtDesc);
             CommUtility.ClearControl(txtStationName, txtSpellCode, txtIP, txtDesc, txtStationID);
             btnAdd.Enabled = false;
             comStationType.SelectedIndex = 0;
@@ -66,7 +66,7 @@ namespace CSSD.Client.UI.ManagerBench
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            CommUtility.SetEnabled(true, btnCan, btnCan, comStationType, txtStationName, txtSpellCode, txtIP, txtDesc);
+            CommUtility.SetEnabled(true, btnSave, btnCan, btnCan, comStationType, txtStationName, txtSpellCode, txtIP, txtDesc);
             CommUtility.SetEnabled(false, btnAdd, btnUpdate);
         }
 
@@ -88,6 +88,8 @@ namespace CSSD.Client.UI.ManagerBench
                 stationModel.StationDesc = txtDesc.Text;
                 stationModel.StationGroupID = Convert.ToInt32(comStationType.SelectedValue + "");
                 stationModel.StationGroupName = comStationType.Text;
+                stationModel.AccountCode = "";// PubStaticModel.AccountCode;
+                stationModel.LogonID = 10001;//PubStaticModel.StiteName;
                 if (string.IsNullOrEmpty(txtStationID.Text.Trim()))
                 {
                     result = stationModel.DelayedInsert(out errorString, PubStaticModel.ConnectionStr);
@@ -100,7 +102,7 @@ namespace CSSD.Client.UI.ManagerBench
                 if (result)
                 {
                     MessageBox.Show("保存成功！");
-                    CommUtility.SetEnabled(false, btnCan, btnCan, comStationType, txtStationName, txtSpellCode, txtIP, txtDesc);
+                    CommUtility.SetEnabled(false, btnSave, btnCan, comStationType, txtStationName, txtSpellCode, txtIP, txtDesc);
                     btnAdd.Enabled = true;
                     DataTable dtSiteTypes = stationModel.DelayedSelectAllToTable(out errorString, PubStaticModel.ConnectionStr);
                     dgvStation.DataSource = dtSiteTypes;
@@ -120,7 +122,7 @@ namespace CSSD.Client.UI.ManagerBench
         {
             try
             {
-                CommUtility.SetEnabled(false, btnCan, btnCan, comStationType, txtStationName, txtSpellCode, txtIP, txtDesc);
+                CommUtility.SetEnabled(false, btnSave, btnCan, comStationType, txtStationName, txtSpellCode, txtIP, txtDesc);
                 CommUtility.ClearControl(txtStationName, txtSpellCode, txtIP, txtDesc, txtStationID);
                 btnAdd.Enabled = true;
                 comStationType.SelectedIndex = 0;
@@ -159,7 +161,7 @@ namespace CSSD.Client.UI.ManagerBench
                 txtIP.Text = dgvStation.CurrentRow.Cells["IPAddress"].Value + "";
                 txtDesc.Text = dgvStation.CurrentRow.Cells["StationDesc"].Value + "";
                 comStationType.Text = dgvStation.CurrentRow.Cells["StationGroupName"].Value + "";
-                btnUpdate.Enabled = false;
+                btnUpdate.Enabled = true;
             }
             catch (Exception ex)
             {

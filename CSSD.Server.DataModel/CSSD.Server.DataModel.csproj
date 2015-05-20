@@ -49,6 +49,9 @@
   <ItemGroup>
     <Compile Include="BatchModel.cs" />
     <Compile Include="ManagerBenchModel\CodingRulesModel.cs" />
+    <Compile Include="ManagerBenchModel\CostModelModel.cs" />
+    <Compile Include="ManagerBenchModel\CustGroupModel.cs" />
+    <Compile Include="ManagerBenchModel\CustTableModel.cs" />
     <Compile Include="ManagerBenchModel\MachineGroupModel.cs" />
     <Compile Include="ManagerBenchModel\MachineModel.cs" />
     <Compile Include="ManagerBenchModel\MachineStatusModel.cs" />
@@ -56,6 +59,7 @@
     <Compile Include="ManagerBenchModel\SiteModel.cs" />
     <Compile Include="ManagerBenchModel\SiteTypeModel.cs" />
     <Compile Include="ManagerBenchModel\StationModel.cs" />
+    <Compile Include="ManagerBenchModel\UserGroupModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

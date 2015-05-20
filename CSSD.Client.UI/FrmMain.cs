@@ -31,7 +31,7 @@ namespace CSSD.Client.UI
             string str = CommUtility.GetCodingRules(1001);
         }
 
-        private void btnSiteType_Click(object sender, EventArgs e)
+        private void buttonItem5_Click(object sender, EventArgs e)
         {
             FrmSiteType frmSiteType = null;
             foreach (DockContent frm in dockPanel1.Contents)
@@ -46,9 +46,8 @@ namespace CSSD.Client.UI
             frmSiteType.Show(this.dockPanel1);
         }
 
-        private void btnSite_Click(object sender, EventArgs e)
+        private void buttonItem6_Click(object sender, EventArgs e)
         {
-
             FrmSite frmSite = null;
             foreach (DockContent frm in dockPanel1.Contents)
             {
@@ -62,7 +61,7 @@ namespace CSSD.Client.UI
             frmSite.Show(this.dockPanel1);
         }
 
-        private void buttonItem2_Click(object sender, EventArgs e)
+        private void buttonItem7_Click(object sender, EventArgs e)
         {
             FrmEquipment frmSite = null;
             foreach (DockContent frm in dockPanel1.Contents)
@@ -77,7 +76,7 @@ namespace CSSD.Client.UI
             frmSite.Show(this.dockPanel1);
         }
 
-        private void buttonItem3_Click(object sender, EventArgs e)
+        private void buttonItem8_Click(object sender, EventArgs e)
         {
             FrmStation frmSite = null;
             foreach (DockContent frm in dockPanel1.Contents)
@@ -92,7 +91,7 @@ namespace CSSD.Client.UI
             frmSite.Show(this.dockPanel1);
         }
 
-        private void buttonItem4_Click(object sender, EventArgs e)
+        private void buttonItem9_Click(object sender, EventArgs e)
         {
             FrmPrinter frmSite = null;
             foreach (DockContent frm in dockPanel1.Contents)
@@ -104,6 +103,66 @@ namespace CSSD.Client.UI
                 }
             }
             frmSite = new FrmPrinter();
+            frmSite.Show(this.dockPanel1);
+        }
+
+        private void buttonItem1_Click(object sender, EventArgs e)
+        {
+            FrmCustGroup frmSite = null;
+            foreach (DockContent frm in dockPanel1.Contents)
+            {
+                if (frm is FrmCustGroup)
+                {
+                    frm.Activate();
+                    return;
+                }
+            }
+            frmSite = new FrmCustGroup();
+            frmSite.Show(this.dockPanel1);
+        }
+
+        private void buttonItem10_Click(object sender, EventArgs e)
+        {
+            FrmCustTable frmSite = null;
+            foreach (DockContent frm in dockPanel1.Contents)
+            {
+                if (frm is FrmCustTable)
+                {
+                    frm.Activate();
+                    return;
+                }
+            }
+            frmSite = new FrmCustTable();
+            frmSite.Show(this.dockPanel1);
+        }
+
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            FrmUser frmSite = null;
+            foreach (DockContent frm in dockPanel1.Contents)
+            {
+                if (frm is FrmUser)
+                {
+                    frm.Activate();
+                    return;
+                }
+            }
+            frmSite = new FrmUser();
+            frmSite.Show(this.dockPanel1);
+        }
+
+        private void buttonItem11_Click(object sender, EventArgs e)
+        {
+            FrmUserGroup frmSite = null;
+            foreach (DockContent frm in dockPanel1.Contents)
+            {
+                if (frm is FrmUserGroup)
+                {
+                    frm.Activate();
+                    return;
+                }
+            }
+            frmSite = new FrmUserGroup();
             frmSite.Show(this.dockPanel1);
         }
     }

@@ -177,7 +177,7 @@
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX9.Enabled = false;
             this.labelX9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX9.Location = new System.Drawing.Point(5, 284);
+            this.labelX9.Location = new System.Drawing.Point(3, 287);
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(111, 26);
             this.labelX9.TabIndex = 25;
@@ -187,10 +187,11 @@
             // 
             this.comSiteType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comSiteType.Enabled = false;
+            this.comSiteType.Font = new System.Drawing.Font("宋体", 12F);
             this.comSiteType.FormattingEnabled = true;
             this.comSiteType.Location = new System.Drawing.Point(123, 287);
             this.comSiteType.Name = "comSiteType";
-            this.comSiteType.Size = new System.Drawing.Size(239, 20);
+            this.comSiteType.Size = new System.Drawing.Size(239, 24);
             this.comSiteType.TabIndex = 7;
             // 
             // labelX8

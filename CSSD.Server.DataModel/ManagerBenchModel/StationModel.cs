@@ -97,16 +97,16 @@ namespace CSSD.Server.DataModel.ManagerBenchModel
         {
             errorString = string.Empty;
             string sqlStr = "insert into Station(" +
-                "StationGroupID,StationName,StationDesc,LogonID,IPAddress,PrinterID,AccountCode,SpellCode" +
-            ")values(@StationGroupID,@StationName,@StationDesc,@LogonID,@IPAddress,@PrinterID,@AccountCode,@SpellCode);";
+                "StationGroupID,StationName,StationDesc,LogonID,IPAddress,PrinterID,AccountCode,SpellCode,StationGroupName" +
+            ")values(@StationGroupID,@StationName,@StationDesc,@LogonID,@IPAddress,@PrinterID,@AccountCode,@SpellCode,@StationGroupName);";
             SqlParameter[] parameters = {   new SqlParameter("@StationGroupID", StationGroupID),
                                             new SqlParameter("@StationName", StationName),
                                             new SqlParameter("@StationDesc", StationDesc),
-
                                             new SqlParameter("@LogonID", LogonID),
                                             new SqlParameter("@IPAddress", IPAddress),
                                             new SqlParameter("@PrinterID", PrinterID),
                                             new SqlParameter("@AccountCode", AccountCode),
+                                            new SqlParameter("@StationGroupName", StationGroupName),
                                             new SqlParameter("@SpellCode", SpellCode)
                                         };
             int result = SqlDatabaseManager<StationModel>.ExecuteNonQuery(out errorString, connectionString, sqlStr, parameters);
@@ -129,15 +129,19 @@ namespace CSSD.Server.DataModel.ManagerBenchModel
         public bool DelayedUpdate(out string errorString, string connectionString)
         {
             errorString = string.Empty;
-            string sqlStr = "Update Station set" +
-                "StationGroupID=@StationGroupID,StationName=@StationName,StationDesc=@StationDesc,LogonID=@LogonID,IPAddress=@IPAddress,PrinterID=@PrinterID,AccountCode=@AccountCode,SpellCode=@SpellCode;";
+            string sqlStr = "Update Station set " +
+                "StationGroupID=@StationGroupID,StationName=@StationName,StationDesc=@StationDesc,LogonID=@LogonID,"
+            +"IPAddress=@IPAddress,PrinterID=@PrinterID,AccountCode=@AccountCode,"
+            + "SpellCode=@SpellCode,StationGroupName=@StationGroupName where StationID=@StationID;";
             SqlParameter[] parameters = {   new SqlParameter("@StationGroupID", StationGroupID),
+                                            new SqlParameter("@StationID", StationID),
                                             new SqlParameter("@StationName", StationName),
                                             new SqlParameter("@StationDesc", StationDesc),
                                             new SqlParameter("@LogonID", LogonID),
                                             new SqlParameter("@IPAddress", IPAddress),
                                             new SqlParameter("@PrinterID", PrinterID),
                                             new SqlParameter("@AccountCode", AccountCode),
+                                            new SqlParameter("@StationGroupName", StationGroupName),
                                             new SqlParameter("@SpellCode", SpellCode)
                                         };
             int result = SqlDatabaseManager<StationModel>.ExecuteNonQuery(out errorString, connectionString, sqlStr, parameters);
