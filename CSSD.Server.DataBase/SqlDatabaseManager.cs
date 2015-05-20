@@ -20,7 +20,6 @@ namespace CSSD.Server.DataBase
         /// <returns></returns>
         public static int ExecuteNonQuery(out string errorString, string connectionString, string commandText, params IDbDataParameter[] args)
         {
-
             using (SqlCommand dbCommand = new SqlCommand(commandText, new SqlConnection(connectionString)))
             {
                 return BaseDataBase<T>.ExecuteNonQuery(out errorString, dbCommand, args);
