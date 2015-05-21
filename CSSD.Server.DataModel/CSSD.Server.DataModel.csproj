@@ -55,6 +55,7 @@
     <Compile Include="ManagerBenchModel\MachineGroupModel.cs" />
     <Compile Include="ManagerBenchModel\MachineModel.cs" />
     <Compile Include="ManagerBenchModel\MachineStatusModel.cs" />
+    <Compile Include="ManagerBenchModel\PermissionModel.cs" />
     <Compile Include="ManagerBenchModel\PrinterModel.cs" />
     <Compile Include="ManagerBenchModel\SiteModel.cs" />
     <Compile Include="ManagerBenchModel\SiteTypeModel.cs" />

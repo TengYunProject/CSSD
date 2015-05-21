@@ -20,16 +20,16 @@ namespace CSSD.Server.DataModel.ManagerBenchModel
             get { return userGroupID; }
             set { userGroupID = value; }
         }
-        private int userGroupDesc;
+        private string userGroupDesc;
 
-        public int UserGroupDesc
+        public string UserGroupDesc
         {
             get { return userGroupDesc; }
             set { userGroupDesc = value; }
         }
-        private int permissionID;
+        private string permissionID;
 
-        public int PermissionID
+        public string PermissionID
         {
             get { return permissionID; }
             set { permissionID = value; }
@@ -110,9 +110,9 @@ namespace CSSD.Server.DataModel.ManagerBenchModel
         public bool DelayedUpdate(out string errorString, string connectionString)
         {
             errorString = string.Empty;
-            string sqlStr = "update UserGroup set" +
-                "UserGroupID=@UserGroupID,UserGroupDesc=@UserGroupDesc,PermissionID=@PermissionID,UserGroupName=@UserGroupName,"
-                + "CreateUserID=@CreateUserID,CreateDateTime=@CreateDateTime,AccountCode@AccountCode,SpellCode=@SpellCode "
+            string sqlStr = "update UserGroup set " +
+                "UserGroupDesc=@UserGroupDesc,PermissionID=@PermissionID,UserGroupName=@UserGroupName,"
+                + "CreateUserID=@CreateUserID,CreateDateTime=@CreateDateTime,AccountCode=@AccountCode,SpellCode=@SpellCode"
                 + " where UserGroupID=@UserGroupID;";
             SqlParameter[] parameters = {   new SqlParameter("@UserGroupID", UserGroupID),			
                                             new SqlParameter("@UserGroupDesc", UserGroupDesc),
